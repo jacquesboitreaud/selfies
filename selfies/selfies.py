@@ -2266,7 +2266,7 @@ def _insert_rings_to_smiles(smiles,N_restrict=True,bilocal_ring_function=True):
                 allowed_bond_at_target=42   # some large number
                 if bilocal_ring_function:
                     target_atom_type=smiles[r_count-1]
-                    if target_atom_type=='F' or target_atom_type=='H':
+                    if target_atom_type=='F' or target_atom_type=='H' or target_atom_type =='Cl' or target_atom_type =='Br' or target_atom_type == 'I':
                         allowed_bond_at_target=1
                     elif target_atom_type=='O':
                         allowed_bond_at_target=2
